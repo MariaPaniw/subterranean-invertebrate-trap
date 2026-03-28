@@ -178,4 +178,4 @@ If you use these data or code, please cite the associated paper:
 
 ## Contact
 
-For questions about the data or methods, please open an issue on this repository or contact the corresponding author via GitHub: [@MariaPaniw](https://github.com/MariaPaniw).
+For questions about the data or methods, please contact wrjubber@gmail.com  or m.paniw@gmail.com.
