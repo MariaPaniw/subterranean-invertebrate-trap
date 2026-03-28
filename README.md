@@ -4,6 +4,10 @@
 > Jubber W, Fuller A, Manser MB, Paniw M. *Capturing the unseen: a low-cost method for stratified subterranean sampling of soil invertebrates in drylands.* **Ecological Solutions and Evidence**, in press.
 
 ---
+> **Zenodo link:**
+[![DOI](https://zenodo.org/badge/1037187717.svg)](https://doi.org/10.5281/zenodo.19300403)
+
+---
 
 ## Overview
 
