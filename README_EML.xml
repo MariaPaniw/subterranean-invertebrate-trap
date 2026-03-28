@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml
+  xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2"
+  xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd"
+  packageId="MariaPaniw.subterranean-invertebrate-trap.1"
+  system="https://github.com/MariaPaniw/subterranean-invertebrate-trap"
+  scope="system">
+
+  <!-- ============================================================ -->
+  <!--  DATASET                                                      -->
+  <!-- ============================================================ -->
+  <dataset>
+
+    <title>Capturing the unseen: a novel, low-cost method for stratified subterranean
+      sampling of soil invertebrates in drylands — data and analysis code</title>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  CREATORS                                                   -->
+    <!-- ---------------------------------------------------------- -->
+    <creator id="mariapaniw">
+      <individualName>
+        <givenName>Maria</givenName>
+        <surName>Paniw</surName>
+      </individualName>
+      <organizationName>[University / Research Institution — Spanish National Research Council]</organizationName>
+      <electronicMailAddress>[email — maria.paniw@ebd.csic.es]</electronicMailAddress>
+      <onlineUrl>https://github.com/MariaPaniw</onlineUrl>
+    </creator>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  PUBLICATION DATE                                           -->
+    <!-- ---------------------------------------------------------- -->
+    <pubDate>2025-07-06</pubDate>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  ABSTRACT                                                   -->
+    <!-- ---------------------------------------------------------- -->
+    <abstract>
+      <para>
+        This repository contains empirical data and statistical analysis code
+        associated with the manuscript "Capturing the unseen: a novel, low-cost
+        method for stratified subterranean sampling of soil invertebrates in
+        drylands." The study introduces and evaluates two subterranean pitfall-trap
+        designs — a double-stratified design (two soil layers) and a
+        three-stratified design (three soil layers) — deployed across ten sites in
+        the Kalahari dryland system. The dataset records taxonomic identifications
+        (Class, Order, Family, Subfamily, Tribe, Genus, Species), counts, and
+        dry biomass of invertebrates captured between October 2024 and March 2025.
+        The R code replicates all analyses reported in the manuscript, including
+        generalised linear mixed models (GLMMs) of species richness and biomass,
+        and Bayesian multivariate Poisson models of abundance for the dominant
+        families Scarabaeidae and Tenebrionidae.
+      </para>
+    </abstract>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  KEYWORDS                                                   -->
+    <!-- ---------------------------------------------------------- -->
+    <keywordSet>
+      <keyword>soil invertebrates</keyword>
+      <keyword>subterranean trapping</keyword>
+      <keyword>pitfall trap</keyword>
+      <keyword>dryland ecology</keyword>
+      <keyword>Kalahari</keyword>
+      <keyword>invertebrate sampling</keyword>
+      <keyword>species richness</keyword>
+      <keyword>biomass</keyword>
+      <keyword>Scarabaeidae</keyword>
+      <keyword>Tenebrionidae</keyword>
+      <keyword>Termitidae</keyword>
+      <keyword>macrohabitat</keyword>
+      <keyword>stratified sampling</keyword>
+      <keyword>GLMM</keyword>
+      <keyword>MCMCglmm</keyword>
+      <keyword>R</keyword>
+      <keywordThesaurus>None</keywordThesaurus>
+    </keywordSet>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  INTELLECTUAL RIGHTS                                        -->
+    <!-- ---------------------------------------------------------- -->
+    <intellectualRights>
+      <para>
+        This work is dedicated to the public domain under the Creative Commons
+        Zero (CC0 1.0) Universal Public Domain Dedication. To the extent possible
+        under law, the author has waived all copyright and related or neighbouring
+        rights to this work. See https://creativecommons.org/publicdomain/zero/1.0/
+        for details.
+      </para>
+    </intellectualRights>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  DISTRIBUTION (online repository)                          -->
+    <!-- ---------------------------------------------------------- -->
+    <distribution>
+      <online>
+        <url function="information">
+          https://github.com/MariaPaniw/subterranean-invertebrate-trap
+        </url>
+      </online>
+    </distribution>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  GEOGRAPHIC COVERAGE                                        -->
+    <!-- ---------------------------------------------------------- -->
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>
+          Kalahari dryland system, southern Africa. Ten sampling sites were
+          distributed across two macrohabitat types (distinguishable by sand
+          cover / land use) along two trap-line configurations per site
+          (L01 = double-stratified line; L05 = three-stratified line).
+        </geographicDescription>
+        <boundingCoordinates>
+          <!-- Precise coordinates -->
+          <westBoundingCoordinate>21.84</westBoundingCoordinate>
+          <eastBoundingCoordinate>21.92</eastBoundingCoordinate>
+          <northBoundingCoordinate>-26.97</northBoundingCoordinate>
+          <southBoundingCoordinate>-27.08</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+
+      <!-- -------------------------------------------------------- -->
+      <!--  TEMPORAL COVERAGE                                        -->
+      <!-- -------------------------------------------------------- -->
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2024-10-25</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2025-03-31</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+
+      <!-- -------------------------------------------------------- -->
+      <!--  TAXONOMIC COVERAGE                                       -->
+      <!-- -------------------------------------------------------- -->
+      <taxonomicCoverage>
+        <generalTaxonomicCoverage>
+          Soil invertebrates (primarily Class Insecta and other invertebrate
+          classes) captured by subterranean pitfall traps in a semi-arid
+          dryland system. Key taxa include Scarabaeidae, Tenebrionidae,
+          and Termitidae at the family level. Unidentified specimens at the
+          Class level were excluded from diversity analyses.
+        </generalTaxonomicCoverage>
+        <taxonomicClassification>
+          <taxonRankName>Kingdom</taxonRankName>
+          <taxonRankValue>Animalia</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>Phylum</taxonRankName>
+            <taxonRankValue>Arthropoda</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>Class</taxonRankName>
+              <taxonRankValue>Insecta</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>Family</taxonRankName>
+                <taxonRankValue>Scarabaeidae</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                <taxonRankName>Family</taxonRankName>
+                <taxonRankValue>Tenebrionidae</taxonRankValue>
+              </taxonomicClassification>
+              <taxonomicClassification>
+                <taxonRankName>Family</taxonRankName>
+                <taxonRankValue>Termitidae</taxonRankValue>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+      </taxonomicCoverage>
+    </coverage>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  CONTACTS                                                   -->
+    <!-- ---------------------------------------------------------- -->
+    <contact>
+      <references>mariapaniw</references>
+    </contact>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  METHODS                                                    -->
+    <!-- ---------------------------------------------------------- -->
+    <methods>
+      <methodStep>
+        <description>
+          <para>
+            <title>Trap design and deployment</title>
+            Two novel low-cost subterranean pitfall trap designs were deployed
+            at 10 sites across the Kalahari. The double-stratified design
+            (trap line L01) captured invertebrates at two distinct soil depths
+            (layers L01 and L02). The three-stratified design (trap line L05)
+            captured invertebrates at three soil depths (layers L01, L02, and
+            L03). Traps were checked approximately monthly, yielding five
+            sampling occasions:
+            Occasion 1 = October–November 2024,
+            Occasion 2 = December 2024,
+            Occasion 3 = January 2025,
+            Occasion 4 = February 2025,
+            Occasion 5 = March 2025.
+          </para>
+        </description>
+      </methodStep>
+
+      <methodStep>
+        <description>
+          <para>
+            <title>Specimen identification and enumeration</title>
+            Captured invertebrates were identified to the lowest practicable
+            taxonomic level (Class, Order, Family, Subfamily, Tribe, Genus,
+            Species). Counts (Number_caught) and dry biomass (Weight, in grams)
+            were recorded per trap per collection event. Unidentified specimens
+            at the Class level were excluded from all diversity and abundance
+            analyses.
+          </para>
+        </description>
+      </methodStep>
+
+      <methodStep>
+        <description>
+          <para>
+            <title>Statistical analyses</title>
+            All analyses were conducted in R (≥ 4.x). The analysis script
+            analyses_subterranean_submission.R reproduces the following:
+            (1) Species richness (number of unique family–genus–species
+            combinations) modelled with zero-inflated Poisson and negative
+            binomial GLMMs (glmmTMB package), with site as a random effect
+            and sampling occasion, macrohabitat (land_use), sand cover (Sand),
+            and trap design (line) as candidate fixed effects.
+            (2) Biomass modelled with Tweedie GLMMs (glmmTMB) using the same
+            candidate predictors.
+            (3) Abundance of Scarabaeidae and Tenebrionidae modelled jointly
+            with Bayesian multivariate Poisson GLMMs (MCMCglmm package),
+            with habitat and sampling occasion as fixed effects and site as
+            a random effect; three parallel MCMC chains were run and
+            convergence assessed via Gelman–Rubin diagnostics.
+            Model comparison was based on AIC; sampling occasion was the
+            primary driver of both richness and abundance.
+          </para>
+        </description>
+      </methodStep>
+    </methods>
+
+    <!-- ============================================================ -->
+    <!--  DATA TABLES                                                  -->
+    <!-- ============================================================ -->
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  1. TableS1_forAnalysis.csv                                 -->
+    <!-- ---------------------------------------------------------- -->
+    <dataTable id="tableS1">
+      <entityName>TableS1_forAnalysis.csv</entityName>
+      <entityDescription>
+        Main invertebrate occurrence dataset. Each row represents one
+        taxonomic record collected from a single trap on a single collection
+        date. This file is the primary input for all richness and abundance
+        analyses.
+      </entityDescription>
+      <physical>
+        <objectName>TableS1_forAnalysis.csv</objectName>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url>https://github.com/MariaPaniw/subterranean-invertebrate-trap/blob/main/TableS1_forAnalysis.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Ref</attributeName>
+          <attributeLabel>Trap reference code</attributeLabel>
+          <attributeDefinition>
+            Unique alphanumeric reference code for each trap location and
+            layer. Encoded as: [prefix][site (3 chars)][line (L01 or L05)]
+            [layer (L01–L03)]. Example: "XABCL01L02" identifies site ABC,
+            double-stratified line, layer 2.
+          </attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Alphanumeric trap identifier</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+
+        <attribute>
+          <attributeName>Timestamp</attributeName>
+          <attributeLabel>Collection date and time</attributeLabel>
+          <attributeDefinition>
+            Date and time the trap was collected, in the format
+            DD/MM/YY HH:MM.
+          </attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>DD/MM/YY HH:MM</formatString>
+              <dateTimePrecision>1 minute</dateTimePrecision>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+
+        <attribute>
+          <attributeName>Method</attributeName>
+          <attributeLabel>Trap design type</attributeLabel>
+          <attributeDefinition>
+            Trap design used. One of two values: "double-stratified
+            subterranean" (L01 line, two layers) or "three-stratified
+            subterranean" (L05 line, three layers).
+          </attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>double-stratified subterranean</code>
+                    <definition>Two-layer subterranean trap design (line L01)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>three-stratified subterranean</code>
+                    <definition>Three-layer subterranean trap design (line L05)</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+
+        <attribute>
+          <attributeName>Class</attributeName>
+          <attributeLabel>Taxonomic Class</attributeLabel>
+          <attributeDefinition>
+            Invertebrate class (e.g., Insecta). Records labelled
+            "Unidentified" were excluded from diversity and abundance
+            analyses.
+          </attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Taxonomic class name</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+
+        <attribute>
+          <attributeName>Order</attributeName>
+          <attributeLabel>Taxonomic Order</attributeLabel>
+          <attributeDefinition>Invertebrate order.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain><definition>Taxonomic order name</definition></textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+
+        <attribute>
+          <attributeName>Family</attributeName>
+          <attributeLabel>Taxonomic Family</attributeLabel>
+          <attributeDefinition>Invertebrate family.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain><definition>Taxonomic family name</definition></textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+
+        <attribute>
+          <attributeName>Subfamily</attributeName>
+          <attributeLabel>Taxonomic Subfamily</attributeLabel>
+          <attributeDefinition>Invertebrate subfamily (if identified).</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain><definition>Taxonomic subfamily name</definition></textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+
+        <attribute>
+          <attributeName>Tribe</attributeName>
+          <attributeLabel>Taxonomic Tribe</attributeLabel>
+          <attributeDefinition>Invertebrate tribe (if identified).</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain><definition>Taxonomic tribe name</definition></textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+
+        <attribute>
+          <attributeName>Genera</attributeName>
+          <attributeLabel>Taxonomic Genus</attributeLabel>
+          <attributeDefinition>Invertebrate genus (if identified).</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain><definition>Genus name</definition></textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+
+        <attribute>
+          <attributeName>Species</attributeName>
+          <attributeLabel>Taxonomic Species</attributeLabel>
+          <attributeDefinition>Species epithet (if identified).</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain><definition>Species epithet</definition></textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+
+        <attribute>
+          <attributeName>Number_caught</attributeName>
+          <attributeLabel>Number of individuals caught</attributeLabel>
+          <attributeDefinition>
+            Count of individuals of the given taxon captured in the trap
+            on the given collection event.
+          </attributeDefinition>
+          <storageType>integer</storageType>
+          <measurementScale>
+            <ratio>
+              <unit><standardUnit>number</standardUnit></unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Count not recorded for this event.</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+    </dataTable>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  2. subterraneanHabitat_202502.csv                          -->
+    <!-- ---------------------------------------------------------- -->
+    <dataTable id="habitat">
+      <entityName>subterraneanHabitat_202502.csv</entityName>
+      <entityDescription>
+        Macrohabitat and site-level covariates for each trap line across
+        the 10 study sites. Contains 20 records (10 sites × 2 lines each).
+        Used to join land-use category and sand cover to the occurrence data.
+      </entityDescription>
+      <physical>
+        <objectName>subterraneanHabitat_202502.csv</objectName>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url>https://github.com/MariaPaniw/subterranean-invertebrate-trap/blob/main/subterraneanHabitat_202502.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Site</attributeName>
+          <attributeLabel>Full site-line reference</attributeLabel>
+          <attributeDefinition>
+            Composite key encoding site and trap line, used to derive
+            "site" (characters 2–4) and "line" (characters 5–7) via
+            substr() in R.
+          </attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain><definition>Alphanumeric site identifier</definition></textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+
+        <attribute>
+          <attributeName>land_use</attributeName>
+          <attributeLabel>Land-use / macrohabitat category</attributeLabel>
+          <attributeDefinition>
+            Categorical macrohabitat descriptor for the site (e.g.,
+            degraded / intact, or specific land-use classes). Used as a
+            fixed effect in GLMMs.
+          </attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain><definition>Land-use category label</definition></textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+
+        <attribute>
+          <attributeName>Sand</attributeName>
+          <attributeLabel>Sand cover (%)</attributeLabel>
+          <attributeDefinition>
+            Proportion or percentage of sand cover at the site-line
+            combination. Used as a continuous habitat covariate (hab) in
+            statistical models.
+          </attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit><standardUnit>dimensionless</standardUnit></unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">100</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+
+    <!-- ---------------------------------------------------------- -->
+    <!--  3. biomass_data/ folder                                    -->
+    <!-- ---------------------------------------------------------- -->
+    <dataTable id="biomass">
+      <entityName>biomass_data/ (directory of Excel workbooks)</entityName>
+      <entityDescription>
+        A directory containing multiple Excel (.xlsx) files, one per
+        collection event, recording dry biomass and individual counts per
+        trap reference. Files are named by collection date
+        (DD_MM_YYYY format). The R script reads and concatenates all files
+        in this directory. Each workbook contains a single sheet with the
+        columns described below.
+      </entityDescription>
+      <physical>
+        <objectName>biomass_data/</objectName>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>Microsoft Excel Open XML Spreadsheet (.xlsx)</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url>https://github.com/MariaPaniw/subterranean-invertebrate-trap/tree/main/biomass_data</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeLabel>Collection date</attributeLabel>
+          <attributeDefinition>
+            Date the trap was collected (read from column 1 of each workbook).
+          </attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+
+        <attribute>
+          <attributeName>Ref</attributeName>
+          <attributeLabel>Trap reference code</attributeLabel>
+          <attributeDefinition>
+            Same encoding as in TableS1_forAnalysis.csv (see above). 25
+            unique references per collection event (10 sites × up to 3
+            layers × 2 lines, with the L01×L03 combination absent).
+          </attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain><definition>Alphanumeric trap identifier</definition></textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+
+        <attribute>
+          <attributeName>Weight</attributeName>
+          <attributeLabel>Dry biomass (g)</attributeLabel>
+          <attributeDefinition>
+            Total dry mass of all invertebrates captured in the trap for
+            this collection event, in grams.
+          </attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit><standardUnit>gram</standardUnit></unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>No invertebrates or weight not recorded.</codeExplanation>
+          </missingValueCode>
+        </attribute>
+
+        <attribute>
+          <attributeName>Number</attributeName>
+          <attributeLabel>Total count of individuals</attributeLabel>
+          <attributeDefinition>
+            Total number of invertebrate individuals in the trap for this
+            collection event (all taxa combined).
+          </attributeDefinition>
+          <storageType>integer</storageType>
+          <measurementScale>
+            <ratio>
+              <unit><standardUnit>number</standardUnit></unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Count not recorded for this event.</codeExplanation>
+          </missingValueCode>
+        </attribute>
+
+        <attribute>
+          <attributeName>occ</attributeName>
+          <attributeLabel>Sampling occasion (integer)</attributeLabel>
+          <attributeDefinition>
+            Integer sampling occasion assigned in the R script:
+            1 = October–November 2024;
+            2 = December 2024;
+            3 = January 2025;
+            4 = February 2025;
+            5 = March 2025.
+          </attributeDefinition>
+          <storageType>integer</storageType>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition><code>1</code><definition>Oct–Nov 2024</definition></codeDefinition>
+                  <codeDefinition><code>2</code><definition>Dec 2024</definition></codeDefinition>
+                  <codeDefinition><code>3</code><definition>Jan 2025</definition></codeDefinition>
+                  <codeDefinition><code>4</code><definition>Feb 2025</definition></codeDefinition>
+                  <codeDefinition><code>5</code><definition>Mar 2025</definition></codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </ordinal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+
+    <!-- ============================================================ -->
+    <!--  OTHER ENTITY (R analysis script)                            -->
+    <!-- ============================================================ -->
+    <otherEntity id="Rscript">
+      <entityName>analyses_subterranean_submission.R</entityName>
+      <entityDescription>
+        Self-contained R script (1296 lines, last updated 2025-07-06) that
+        reproduces all analyses and figures in the associated manuscript.
+        Sections: (1) data loading and preparation; (2) species richness
+        GLMMs; (3) richness by trap layer; (4) biomass GLMMs; (5) biomass
+        by trap layer; (6) abundance multivariate MCMCglmm analyses.
+        Required R packages: lubridate, mgcv, dplyr, ggplot2, viridis,
+        glmmTMB, readxl, MCMCglmm, tidyr, hdrcde, coda, MCMCvis, patchwork.
+        Users must set their local working directory path in the script
+        before running (search for YOUR_LOCAL_PATH).
+      </entityDescription>
+      <physical>
+        <objectName>analyses_subterranean_submission.R</objectName>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>R script</formatName>
+            <formatVersion>≥ 4.0</formatVersion>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url>https://github.com/MariaPaniw/subterranean-invertebrate-trap/blob/main/analyses_subterranean_submission.R</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>R script</entityType>
+    </otherEntity>
+
+  </dataset>
+</eml:eml>
