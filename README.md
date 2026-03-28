@@ -45,7 +45,7 @@ The primary occurrence dataset. Each row is one taxonomic record from one trap o
 
 | Column | Description |
 |---|---|
-| `Ref` | Trap reference code. Encodes site (chars 2–4), trap line (chars 5–7: `L01` = double-stratified, `L05` = three-stratified), and soil layer (chars 8–10: `L01`–`L03`). |
+| `Ref` | Trap reference code. |
 | `Timestamp` | Collection date and time (`DD/MM/YY HH:MM`). |
 | `Method` | Trap design: `"double-stratified subterranean"` or `"three-stratified subterranean"`. |
 | `Class` | Invertebrate class (e.g., `Insecta`). Rows with `"Unidentified"` are excluded from analyses. |
